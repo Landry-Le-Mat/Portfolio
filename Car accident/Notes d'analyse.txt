@@ -1,0 +1,55 @@
+Le fichier "accident" contient 200 observations avec les colonnes suivantes :
+
+- Age (âge des victimes, entier)
+- Gender (genre, homme/femme, objet)
+- Speed_of_Impact (vitesse d'impact, flottant)
+- Helmet_Used (casque utilisé, oui/non)
+- Seatbelt_Used (ceinture utilisée, oui/non)
+- Survived (a survécu ou non, 1 = oui, 0 = non)
+
+Mes objecitfs d'analyses en 4 étapes :
+1️⃣ Influence de la vitesse d'impact sur la survie
+
+Analyser si une vitesse plus élevée réduit les chances de survie.
+🔹 Techniques : Analyse descriptive, visualisation (boîte à moustaches, histogramme), test statistique
+2️⃣ Impact du port du casque et de la ceinture sur la survie
+
+Vérifier si le casque et la ceinture augmentent les chances de survie.
+🔹 Techniques : GroupBy, comparaison des moyennes, test du Chi²
+3️⃣ Distribution des accidents par âge et genre
+
+Explorer quels groupes d’âge et quel genre sont les plus touchés.
+🔹 Techniques : Histogramme, courbe de densité, analyse des proportions
+4️⃣ Facteurs combinés influençant la survie
+
+Modéliser quels facteurs (vitesse, âge, protections) ont le plus d’impact sur la survie.
+🔹 Techniques : Régression logistique, analyse des coefficients
+------------------------------------------------------------------------------------------------------------------------------
+🛠️ Étapes Détaillées
+1️⃣ Influence de la vitesse d’impact sur la survie
+📌 Étapes :
+
+Vérifier s’il y a des valeurs manquantes dans Speed_of_Impact.
+Comparer la distribution des vitesses entre survivants et non-survivants.
+Visualiser avec un boxplot et un histogramme.
+Effectuer un test statistique pour voir si la différence est significative.
+2️⃣ Impact du casque et de la ceinture sur la survie
+📌 Étapes :
+
+Créer un tableau croisé (crosstab) entre Helmet_Used, Seatbelt_Used et Survived.
+Calculer les taux de survie pour chaque catégorie.
+Visualiser avec un graphique en barres.
+Effectuer un test du Chi² pour vérifier si la corrélation est significative.
+3️⃣ Distribution des accidents par âge et genre
+📌 Étapes :
+
+Vérifier les valeurs manquantes dans Age et Gender.
+Visualiser la distribution de l’âge par genre avec un histogramme.
+Analyser les proportions d’accidents selon les groupes d’âge.
+4️⃣ Facteurs combinés influençant la survie
+📌 Étapes :
+
+Remplir les valeurs manquantes.
+Encoder les variables catégoriques (Gender, Helmet_Used, Seatbelt_Used).
+Effectuer une régression logistique pour voir les facteurs les plus influents.
+Analyser les coefficients pour interpréter l’impact de chaque variable.
