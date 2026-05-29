@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Landry Randrianirina</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#0f172a;
+      color:white;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+      background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    }
+
+    .hero{
+      max-width:1200px;
+      width:100%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:60px;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+
+    .hero-text span{
+      color:#38bdf8;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      margin-bottom:30px;
+      font-size:18px;
+    }
+
+    .btns{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn-primary{
+      background:#38bdf8;
+      color:#0f172a;
+    }
+
+    .btn-primary:hover{
+      background:white;
+    }
+
+    .btn-secondary{
+      border:2px solid #38bdf8;
+      color:#38bdf8;
+    }
+
+    .btn-secondary:hover{
+      background:#38bdf8;
+      color:#0f172a;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    section{
+      padding:90px 10%;
+    }
+
+    .section-title{
+      font-size:40px;
+      margin-bottom:40px;
+      text-align:center;
+      color:#38bdf8;
+    }
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .skill-box{
+      background:#1e293b;
+      padding:25px;
+      border-radius:18px;
+      transition:0.3s;
+    }
+
+    .skill-box:hover{
+      transform:translateY(-5px);
+    }
+
+    .skill-box h3{
+      margin-bottom:15px;
+      color:#38bdf8;
+    }
+
+    .experience{
+      display:grid;
+      gap:25px;
+    }
+
+    .exp-box{
+      background:#1e293b;
+      padding:25px;
+      border-radius:18px;
+    }
+
+    .exp-box h3{
+      color:#38bdf8;
+      margin-bottom:10px;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      color:#cbd5e1;
+      margin-bottom:30px;
+      font-size:18px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#94a3b8;
+      background:#020617;
+    }
+
+    @media(max-width:768px){
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+
+      <div class="hero-text">
+        <h1>
+          Bonjour, je suis <span>Landry Randrianirina</span>
+        </h1>
+
+        <p>
+          Étudiant en Master 1 Contrôle de Gestion passionné par
+          l’analyse de données, Excel, l’automatisation et le pilotage
+          de performance.
+        </p>
+
+        <div class="btns">
+          <a href="mailto:landry.moderateur@gmail.com" class="btn btn-primary">
+            Me contacter par Mail
+          </a>
+
+          <a href="https://wa.me/261346787352" class="btn btn-secondary" target="_blank">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-bottom:20px;color:#38bdf8;">À propos</h2>
+
+        <p>
+          Profil sérieux et motivé, actuellement en attente de l’obtention
+          de mon diplôme de Master 1 en Contrôle de Gestion.
+        </p>
+
+        <br>
+
+        <p>
+          J’ai développé des compétences solides en :
+        </p>
+
+        <br>
+
+        <ul style="padding-left:20px;color:#cbd5e1;">
+          <li>Analyse de données</li>
+          <li>Excel avancé & automatisation</li>
+          <li>Reporting & tableaux de bord</li>
+          <li>Contrôle de gestion</li>
+          <li>Nettoyage et transformation de données</li>
+          <li>Python & Power BI</li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">Compétences</h2>
+
+    <div class="skills">
+
+      <div class="skill-box">
+        <h3>Excel Avancé</h3>
+        <p>
+          Formules avancées, TCD, automatisation, reporting et suivi de performance.
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Analyse de Données</h3>
+        <p>
+          Nettoyage, transformation, consolidation et visualisation de données.
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Contrôle de Gestion</h3>
+        <p>
+          Budgets, analyse des écarts, tableaux de bord et suivi financier.
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Outils</h3>
+        <p>
+          Excel, Python, Power BI, N8N, Sage 100.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Expériences</h2>
+
+    <div class="experience">
+
+      <div class="exp-box">
+        <h3>Data Operator - Support Reporting</h3>
+        <p><strong>Stockpro | 2023 - 2025</strong></p>
+
+        <p>
+          Production de tableaux de suivi, automatisation Excel,
+          reporting ventes/stocks et analyse des écarts.
+        </p>
+      </div>
+
+      <div class="exp-box">
+        <h3>Stage Contrôle de Gestion</h3>
+        <p><strong>Sénat de Madagascar | 2025</strong></p>
+
+        <p>
+          Préparation de tableaux de bord budgétaires,
+          suivi des dépenses et rédaction de mémoire.
+        </p>
+      </div>
+
+      <div class="exp-box">
+        <h3>Data Service</h3>
+        <p><strong>Daybiz | 2025 - 2026</strong></p>
+
+        <p>
+          Nettoyage de plus de 50 000 lignes de données,
+          automatisation et web scraping.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <p>
+      Vous souhaitez collaborer avec moi ou discuter d’un projet ?
+      Contactez-moi directement via WhatsApp ou Email.
+    </p>
+
+    <div class="btns" style="justify-content:center;">
+
+      <a href="mailto:landry.moderateur@gmail.com" class="btn btn-primary">
+        Envoyer un Email
+      </a>
+
+      <a href="https://wa.me/261346787352" class="btn btn-secondary" target="_blank">
+        Contacter sur WhatsApp
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 - Portfolio Landry Randrianirina
+  </footer>
+
+</body>
+</html>

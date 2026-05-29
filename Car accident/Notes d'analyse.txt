@@ -5,7 +5,7 @@ Le fichier "accident" contient 200 observations avec les colonnes suivantes :
 - Speed_of_Impact (vitesse d'impact, flottant)
 - Helmet_Used (casque utilisé, oui/non)
 - Seatbelt_Used (ceinture utilisée, oui/non)
-- Survived (a survécu ou non, 1 = oui, 0 = non)
+- Survive (a survécu ou non, 1 = oui, 0 = non)
 
 Mes objecitfs d'analyses en 4 étapes :
 1️⃣ Influence de la vitesse d'impact sur la survie
