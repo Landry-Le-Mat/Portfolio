@@ -1,14 +1,15 @@
 ```html
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Portfolio | Landry Randrianirina</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
 
@@ -20,19 +21,14 @@
     }
 
     body{
-      font-family:'Poppins',sans-serif;
-      background:#020617;
-      color:white;
+      font-family:'Inter',sans-serif;
+      background:#f4f7fb;
+      color:#1e293b;
       overflow-x:hidden;
     }
 
-    body::-webkit-scrollbar{
-      width:10px;
-    }
-
-    body::-webkit-scrollbar-thumb{
-      background:#38bdf8;
-      border-radius:10px;
+    a{
+      text-decoration:none;
     }
 
     section{
@@ -44,65 +40,67 @@
       margin:auto;
     }
 
-    h1,h2,h3{
-      font-weight:700;
-    }
-
     .section-title{
-      text-align:center;
       font-size:42px;
-      margin-bottom:60px;
-      color:#38bdf8;
+      text-align:center;
+      margin-bottom:70px;
+      color:#0f172a;
       position:relative;
+      font-weight:800;
     }
 
     .section-title::after{
       content:'';
-      width:80px;
+      width:90px;
       height:4px;
-      background:#38bdf8;
+      background:#2563eb;
       position:absolute;
       left:50%;
       transform:translateX(-50%);
-      bottom:-15px;
+      bottom:-18px;
       border-radius:10px;
     }
+
+    /* HERO */
 
     header{
       min-height:100vh;
       display:flex;
       align-items:center;
-      position:relative;
-      overflow:hidden;
       background:
-      radial-gradient(circle at top left,#0ea5e9 0%,transparent 30%),
-      radial-gradient(circle at bottom right,#2563eb 0%,transparent 30%),
-      #020617;
+      linear-gradient(to right, rgba(255,255,255,0.92), rgba(239,246,255,0.88)),
+      url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
     }
 
     .hero{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:60px;
+      gap:70px;
       align-items:center;
       width:100%;
     }
 
     .hero-text h1{
-      font-size:70px;
+      font-size:72px;
       line-height:1.1;
-      margin-bottom:20px;
+      margin-bottom:25px;
+      font-weight:800;
+      color:#0f172a;
     }
 
     .hero-text span{
-      color:#38bdf8;
+      color:#2563eb;
     }
 
     .hero-text p{
-      color:#cbd5e1;
-      margin-bottom:35px;
       font-size:18px;
-      line-height:1.8;
+      color:#475569;
+      line-height:1.9;
+      margin-bottom:40px;
+      max-width:650px;
     }
 
     .buttons{
@@ -112,69 +110,64 @@
     }
 
     .btn{
-      padding:15px 30px;
-      border-radius:15px;
+      padding:16px 32px;
+      border-radius:12px;
       font-weight:600;
-      transition:0.4s;
-      cursor:pointer;
+      transition:0.3s;
       display:inline-block;
     }
 
     .btn-primary{
-      background:#38bdf8;
-      color:#020617;
-      box-shadow:0 0 25px rgba(56,189,248,0.5);
+      background:linear-gradient(135deg,#3b82f6,#2563eb);
+      color:white;
+      box-shadow:0 10px 25px rgba(37,99,235,0.2);
     }
 
     .btn-primary:hover{
-      transform:translateY(-5px);
-      background:white;
+      background:linear-gradient(135deg,#2563eb,#1d4ed8);
+      transform:translateY(-4px);
     }
 
     .btn-secondary{
-      border:2px solid #38bdf8;
-      color:#38bdf8;
+      border:2px solid #93c5fd;
+      color:#2563eb;
+      background:white;
     }
 
     .btn-secondary:hover{
-      background:#38bdf8;
-      color:#020617;
-      transform:translateY(-5px);
+      background:#dbeafe;
+      color:#1d4ed8;
+      transform:translateY(-4px);
     }
 
     .hero-card{
-      background:rgba(15,23,42,0.7);
+      background:rgba(255,255,255,0.75);
       backdrop-filter:blur(15px);
-      border:1px solid rgba(255,255,255,0.1);
-      padding:40px;
+      border:1px solid rgba(37,99,235,0.1);
+      padding:45px;
       border-radius:30px;
-      animation:float 4s ease-in-out infinite;
-    }
-
-    @keyframes float{
-      0%{
-        transform:translateY(0px);
-      }
-      50%{
-        transform:translateY(-12px);
-      }
-      100%{
-        transform:translateY(0px);
-      }
+      box-shadow:0 10px 35px rgba(0,0,0,0.06);
     }
 
     .hero-card h2{
+      font-size:32px;
       margin-bottom:20px;
-      color:#38bdf8;
-      font-size:30px;
+      color:#2563eb;
+    }
+
+    .hero-card p{
+      color:#475569;
+      line-height:1.9;
     }
 
     .hero-card ul{
-      margin-top:20px;
+      margin-top:25px;
       padding-left:20px;
-      color:#cbd5e1;
+      color:#475569;
       line-height:2;
     }
+
+    /* SKILLS */
 
     .skills-grid{
       display:grid;
@@ -183,189 +176,263 @@
     }
 
     .skill-card{
-      background:#0f172a;
-      padding:30px;
-      border-radius:25px;
-      transition:0.4s;
-      border:1px solid rgba(255,255,255,0.05);
+      background:white;
+      padding:35px;
+      border-radius:20px;
+      border:1px solid #e2e8f0;
+      box-shadow:0 10px 25px rgba(0,0,0,0.04);
+      transition:0.3s;
     }
 
     .skill-card:hover{
-      transform:translateY(-10px);
-      border-color:#38bdf8;
-      box-shadow:0 0 25px rgba(56,189,248,0.2);
+      transform:translateY(-8px);
+      border-color:#93c5fd;
+      box-shadow:0 20px 40px rgba(37,99,235,0.08);
     }
 
     .skill-card h3{
-      color:#38bdf8;
       margin-bottom:15px;
+      color:#2563eb;
+      font-size:24px;
     }
 
-    .timeline{
-      position:relative;
-      max-width:1000px;
-      margin:auto;
+    .skill-card p{
+      color:#64748b;
+      line-height:1.8;
     }
 
-    .timeline::before{
-      content:'';
-      position:absolute;
-      left:50%;
-      top:0;
-      width:4px;
-      height:100%;
-      background:#38bdf8;
-      transform:translateX(-50%);
+    /* EXPERIENCES */
+
+    .experience-wrapper{
+      display:flex;
+      flex-direction:column;
+      gap:35px;
     }
 
-    .timeline-item{
-      position:relative;
-      width:50%;
-      padding:20px 40px;
+    .experience-card{
+      background:white;
+      padding:40px;
+      border-radius:25px;
+      border-left:6px solid #2563eb;
+      box-shadow:0 10px 25px rgba(0,0,0,0.04);
+      transition:0.3s;
     }
 
-    .timeline-item:nth-child(odd){
-      left:0;
+    .experience-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 40px rgba(37,99,235,0.08);
     }
 
-    .timeline-item:nth-child(even){
-      left:50%;
+    .experience-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:15px;
+      margin-bottom:20px;
     }
 
-    .timeline-content{
-      background:#0f172a;
-      padding:30px;
-      border-radius:20px;
-      border:1px solid rgba(255,255,255,0.05);
-      transition:0.4s;
+    .experience-date{
+      color:#64748b;
+      font-size:15px;
+      font-weight:600;
     }
 
-    .timeline-content:hover{
-      transform:scale(1.03);
-      border-color:#38bdf8;
+    .experience-badge{
+      background:#dbeafe;
+      color:#2563eb;
+      padding:8px 16px;
+      border-radius:30px;
+      font-size:13px;
+      font-weight:700;
     }
 
-    .timeline-content h3{
-      color:#38bdf8;
+    .experience-card h3{
+      font-size:30px;
+      margin-bottom:20px;
+      color:#0f172a;
+    }
+
+    .experience-description{
+      color:#64748b;
+      line-height:1.9;
+      margin-bottom:30px;
+    }
+
+    .experience-details{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+
+    .detail-box{
+      background:#f8fbff;
+      border:1px solid #dbeafe;
+      padding:25px;
+      border-radius:18px;
+    }
+
+    .detail-box h4{
+      color:#2563eb;
       margin-bottom:10px;
     }
 
-    .timeline-content p{
-      color:#cbd5e1;
-      line-height:1.8;
+    .detail-box p{
+      color:#64748b;
+      line-height:1.7;
     }
 
-    .timeline-item::before{
-      content:'';
-      position:absolute;
-      top:40px;
-      width:20px;
-      height:20px;
-      background:#38bdf8;
-      border-radius:50%;
-      z-index:2;
-    }
-
-    .timeline-item:nth-child(odd)::before{
-      right:-10px;
-    }
-
-    .timeline-item:nth-child(even)::before{
-      left:-10px;
-    }
+    /* PORTFOLIOS */
 
     .portfolio-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:30px;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:35px;
     }
 
-    .project-card{
-      background:#0f172a;
+    .portfolio-card{
+      background:white;
+      border:1px solid #dbeafe;
+      box-shadow:0 10px 30px rgba(0,0,0,0.04);
+      padding:40px;
       border-radius:25px;
-      padding:35px;
-      transition:0.4s;
       position:relative;
       overflow:hidden;
+      transition:0.3s;
     }
 
-    .project-card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 0 30px rgba(56,189,248,0.2);
+    .portfolio-card:hover{
+      transform:translateY(-8px);
     }
 
-    .project-card::before{
+    .portfolio-card::before{
       content:'';
       position:absolute;
-      width:150px;
-      height:150px;
-      background:#38bdf8;
-      opacity:0.1;
+      width:200px;
+      height:200px;
+      background:#93c5fd;
+      opacity:0.18;
       border-radius:50%;
-      top:-50px;
-      right:-50px;
+      top:-100px;
+      right:-100px;
     }
 
-    .project-card h3{
-      margin-bottom:15px;
-      color:#38bdf8;
-    }
-
-    .project-card p{
-      color:#cbd5e1;
+    .portfolio-card h3{
+      font-size:28px;
       margin-bottom:20px;
-      line-height:1.8;
+      color:#0f172a;
+      position:relative;
+      z-index:2;
     }
 
-    .contact{
+    .portfolio-card p{
+      color:#64748b;
+      line-height:1.8;
+      margin-bottom:30px;
+      position:relative;
+      z-index:2;
+    }
+
+    .portfolio-link{
+      display:inline-block;
+      padding:14px 24px;
+      background:linear-gradient(135deg,#3b82f6,#2563eb);
+      color:white;
+      border-radius:10px;
+      font-weight:600;
+      box-shadow:0 10px 25px rgba(37,99,235,0.18);
+      transition:0.3s;
+      position:relative;
+      z-index:2;
+    }
+
+    .portfolio-link:hover{
+      background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    }
+
+    /* CAROUSEL */
+
+    .carousel{
+      position:relative;
+      overflow:hidden;
+      border-radius:25px;
+    }
+
+    .carousel-track{
+      display:flex;
+      animation:scroll 25s linear infinite;
+      gap:20px;
+    }
+
+    .carousel img{
+      width:400px;
+      height:250px;
+      object-fit:cover;
+      border-radius:20px;
+      border:4px solid white;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    @keyframes scroll{
+      0%{
+        transform:translateX(0);
+      }
+      100%{
+        transform:translateX(-50%);
+      }
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      background:linear-gradient(135deg,#eff6ff,#dbeafe);
+      border:1px solid #bfdbfe;
       text-align:center;
-      background:#0f172a;
-      border-radius:40px;
       padding:80px 40px;
+      border-radius:30px;
     }
 
-    .contact p{
-      color:#cbd5e1;
+    .contact-box p{
+      color:#475569;
       max-width:700px;
-      margin:20px auto 40px;
-      line-height:1.8;
+      margin:25px auto 40px;
+      line-height:1.9;
     }
+
+    /* FOOTER */
 
     footer{
-      padding:30px;
+      background:white;
+      color:#64748b;
       text-align:center;
-      color:#94a3b8;
-      background:#01040f;
+      padding:30px;
       margin-top:80px;
+      border-top:1px solid #e2e8f0;
     }
 
-    @media(max-width:900px){
+    @media(max-width:768px){
 
       .hero-text h1{
-        font-size:50px;
+        font-size:48px;
       }
 
-      .timeline::before{
-        left:20px;
+      .section-title{
+        font-size:34px;
       }
 
-      .timeline-item{
-        width:100%;
-        padding-left:60px;
-        padding-right:0;
+      .experience-card h3{
+        font-size:24px;
       }
 
-      .timeline-item:nth-child(even){
-        left:0;
-      }
-
-      .timeline-item::before{
-        left:10px !important;
+      .carousel img{
+        width:300px;
+        height:200px;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
@@ -377,14 +444,14 @@
     <div class="hero-text">
 
       <h1>
-        Salut 👋<br>
-        Je suis <span>Landry Randrianirina</span>
+        Landry <br>
+        <span>Randrianirina</span>
       </h1>
 
       <p>
-        Étudiant en Master 1 Contrôle de Gestion, passionné par
-        l’analyse de données, l’automatisation Excel,
-        le reporting et les solutions intelligentes orientées business.
+        Étudiant en Master 1 Contrôle de Gestion spécialisé
+        en analyse de données, automatisation Excel,
+        reporting financier et solutions orientées performance.
       </p>
 
       <div class="buttons">
@@ -403,12 +470,12 @@
 
     <div class="hero-card">
 
-      <h2>À propos de moi</h2>
+      <h2>À propos</h2>
 
-      <p style="color:#cbd5e1; line-height:1.8;">
-        Profil sérieux et motivé avec une forte capacité
-        d’adaptation et une excellente maîtrise des outils
-        d’analyse et d’automatisation de données.
+      <p>
+        Profil sérieux, analytique et orienté résultats.
+        Passionné par l’exploitation intelligente des données,
+        l’automatisation et l’amélioration des performances financières.
       </p>
 
       <ul>
@@ -426,6 +493,8 @@
 
 </header>
 
+<!-- SKILLS -->
+
 <section>
 
   <div class="container">
@@ -437,16 +506,16 @@
       <div class="skill-card">
         <h3>Excel Avancé</h3>
         <p>
-          Formules avancées, TCD, automatisation,
-          reporting et tableaux de bord dynamiques.
+          Formules avancées, tableaux croisés dynamiques,
+          automatisation et dashboards professionnels.
         </p>
       </div>
 
       <div class="skill-card">
         <h3>Analyse de Données</h3>
         <p>
-          Nettoyage, transformation,
-          visualisation et consolidation de données.
+          Nettoyage, transformation, consolidation
+          et visualisation de données stratégiques.
         </p>
       </div>
 
@@ -454,12 +523,12 @@
         <h3>Contrôle de Gestion</h3>
         <p>
           Budgets, analyse des écarts,
-          suivi des performances et KPI.
+          suivi de performance et KPI.
         </p>
       </div>
 
       <div class="skill-card">
-        <h3>Outils Techniques</h3>
+        <h3>Outils</h3>
         <p>
           Excel, Python, Power BI,
           Sage 100, N8N et Web Scraping.
@@ -472,91 +541,78 @@
 
 </section>
 
+<!-- EXPERIENCES -->
+
 <section>
 
   <div class="container">
 
     <h2 class="section-title">Expériences Professionnelles</h2>
 
-    <div class="timeline">
+    <div class="experience-wrapper">
 
-      <div class="timeline-item">
-        <div class="timeline-content">
+      <div class="experience-card">
 
-          <h3>Data Service — Daybiz</h3>
-
-          <p>
-            <strong>2025 - 2026</strong><br><br>
-
-            • Nettoyage et normalisation de plus de
-            50 000 lignes de données.<br>
-
-            • Fusion automatisée de dizaines de fichiers Excel
-            dans un reporting unique.<br>
-
-            • Extraction de données prix via web scraping
-            avec intégration automatique dans Excel.
-          </p>
-
+        <div class="experience-top">
+          <span class="experience-date">2025 - 2026</span>
+          <span class="experience-badge">DATA • AUTOMATISATION</span>
         </div>
+
+        <h3>Data Service — Daybiz</h3>
+
+        <p class="experience-description">
+          Gestion de projets orientés data, automatisation
+          et reporting intelligent.
+        </p>
+
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-content">
+      <div class="experience-card">
 
-          <h3>Stage Contrôle de Gestion — Sénat de Madagascar</h3>
-
-          <p>
-            <strong>Septembre 2025 - Novembre 2025</strong><br><br>
-
-            • Préparation de tableaux de bord budgétaires.<br>
-
-            • Suivi des dépenses et analyse des écarts.<br>
-
-            • Rédaction du mémoire :
-            “Évaluation d’une conception budgétaire”.
-          </p>
-
+        <div class="experience-top">
+          <span class="experience-date">Sept. 2025 - Nov. 2025</span>
+          <span class="experience-badge">FINANCE • ANALYSE</span>
         </div>
+
+        <h3>Stage Contrôle de Gestion — Sénat de Madagascar</h3>
+
+        <p class="experience-description">
+          Mise en pratique des outils de contrôle de gestion
+          et reporting budgétaire institutionnel.
+        </p>
+
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-content">
+      <div class="experience-card">
 
-          <h3>Stage Contrôle Interne — Cabinet TELO A</h3>
-
-          <p>
-            <strong>Juillet 2025 - Septembre 2025</strong><br><br>
-
-            • Formalisation et amélioration des procédures
-            financières.<br>
-
-            • Analyses financières de rentabilité.<br>
-
-            • Rédaction de rapports d’aide à la décision.
-          </p>
-
+        <div class="experience-top">
+          <span class="experience-date">Juil. 2025 - Sept. 2025</span>
+          <span class="experience-badge">AUDIT • CONTRÔLE</span>
         </div>
+
+        <h3>Stage Contrôle Interne — Cabinet TELO A</h3>
+
+        <p class="experience-description">
+          Participation à l’amélioration des processus financiers
+          et analyses de rentabilité.
+        </p>
+
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-content">
+      <div class="experience-card">
 
-          <h3>Data Operator — Stockpro</h3>
-
-          <p>
-            <strong>Mars 2023 - Février 2025</strong><br><br>
-
-            • Création de tableaux de suivi
-            ventes/stocks/chiffre d’affaires.<br>
-
-            • Automatisation de fichiers Excel.<br>
-
-            • Collaboration avec les managers
-            pour améliorer les indicateurs de performance.
-          </p>
-
+        <div class="experience-top">
+          <span class="experience-date">Mars 2023 - Février 2025</span>
+          <span class="experience-badge">REPORTING • EXCEL</span>
         </div>
+
+        <h3>Data Operator — Stockpro</h3>
+
+        <p class="experience-description">
+          Production de tableaux de suivi
+          et automatisation des reportings opérationnels.
+        </p>
+
       </div>
 
     </div>
@@ -564,6 +620,8 @@
   </div>
 
 </section>
+
+<!-- PORTFOLIOS -->
 
 <section>
 
@@ -573,37 +631,35 @@
 
     <div class="portfolio-grid">
 
-      <div class="project-card">
+      <div class="portfolio-card">
 
-        <h3>📁 Portfolio GitHub Principal</h3>
+        <h3>📁 Portfolio Principal</h3>
 
         <p>
-          Retrouvez mes projets, automatisations,
-          dashboards et travaux liés à l’analyse de données,
-          Excel et Python.
+          Retrouvez tous mes projets, dashboards,
+          automatisations Excel et analyses de données.
         </p>
 
         <a href="https://github.com/Landry-Le-Mat/Portfolio"
            target="_blank"
-           class="btn btn-primary">
-           Voir le Repository
+           class="portfolio-link">
+           Voir le Portfolio
         </a>
 
       </div>
 
-      <div class="project-card">
+      <div class="portfolio-card">
 
-        <h3>🚀 Mes 2 Dossiers Portfolio</h3>
+        <h3>🚀 Mes Créations</h3>
 
         <p>
-          Ce repository contient actuellement deux dossiers
-          présentant mes différents projets et réalisations.
+          Découvrez les projets disponibles dans mon repository GitHub.
         </p>
 
         <a href="https://github.com/Landry-Le-Mat/Portfolio"
            target="_blank"
-           class="btn btn-secondary">
-           Explorer les projets
+           class="portfolio-link">
+           Explorer les Projets
         </a>
 
       </div>
@@ -614,18 +670,56 @@
 
 </section>
 
+<!-- CAROUSEL IMAGES -->
+
 <section>
 
   <div class="container">
 
-    <div class="contact">
+    <h2 class="section-title">Captures de Mes Créations</h2>
 
-      <h2 class="section-title">Contact</h2>
+    <div class="carousel">
+
+      <div class="carousel-track">
+
+        <!-- REMPLACE LES NOMS PAR TES IMAGES -->
+
+        <img src="images/projet1.png" alt="Projet 1">
+        <img src="images/projet2.png" alt="Projet 2">
+        <img src="images/projet3.png" alt="Projet 3">
+        <img src="images/projet4.png" alt="Projet 4">
+
+        <!-- DUPLICATION POUR EFFET INFINI -->
+
+        <img src="images/projet1.png" alt="Projet 1">
+        <img src="images/projet2.png" alt="Projet 2">
+        <img src="images/projet3.png" alt="Projet 3">
+        <img src="images/projet4.png" alt="Projet 4">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section>
+
+  <div class="container">
+
+    <div class="contact-box">
+
+      <h2 class="section-title">
+        Contact
+      </h2>
 
       <p>
         Vous souhaitez collaborer avec moi,
         discuter d’un projet ou recruter un profil
-        orienté data, reporting et contrôle de gestion ?
+        orienté data et contrôle de gestion ?
       </p>
 
       <div class="buttons" style="justify-content:center;">
@@ -638,7 +732,7 @@
         <a href="https://wa.me/261346787352"
            target="_blank"
            class="btn btn-secondary">
-           💬 Contacter sur WhatsApp
+           💬 WhatsApp
         </a>
 
       </div>
@@ -656,5 +750,6 @@
 </footer>
 
 </body>
+
 </html>
 ```
