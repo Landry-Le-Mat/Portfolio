@@ -1,14 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio - Landry Randrianirina</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio | Landry Randrianirina</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -17,37 +20,76 @@
     }
 
     body{
-      font-family:'Poppins', sans-serif;
-      background:#0f172a;
+      font-family:'Poppins',sans-serif;
+      background:#020617;
       color:white;
-      line-height:1.6;
+      overflow-x:hidden;
     }
 
-    a{
-      text-decoration:none;
-      color:inherit;
+    body::-webkit-scrollbar{
+      width:10px;
+    }
+
+    body::-webkit-scrollbar-thumb{
+      background:#38bdf8;
+      border-radius:10px;
+    }
+
+    section{
+      padding:100px 10%;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    h1,h2,h3{
+      font-weight:700;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:60px;
+      color:#38bdf8;
+      position:relative;
+    }
+
+    .section-title::after{
+      content:'';
+      width:80px;
+      height:4px;
+      background:#38bdf8;
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:-15px;
+      border-radius:10px;
     }
 
     header{
       min-height:100vh;
       display:flex;
       align-items:center;
-      justify-content:center;
-      padding:40px;
-      background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+      position:relative;
+      overflow:hidden;
+      background:
+      radial-gradient(circle at top left,#0ea5e9 0%,transparent 30%),
+      radial-gradient(circle at bottom right,#2563eb 0%,transparent 30%),
+      #020617;
     }
 
     .hero{
-      max-width:1200px;
-      width:100%;
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:50px;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:60px;
       align-items:center;
+      width:100%;
     }
 
     .hero-text h1{
-      font-size:60px;
+      font-size:70px;
       line-height:1.1;
       margin-bottom:20px;
     }
@@ -58,29 +100,34 @@
 
     .hero-text p{
       color:#cbd5e1;
-      margin-bottom:30px;
+      margin-bottom:35px;
       font-size:18px;
+      line-height:1.8;
     }
 
-    .btns{
+    .buttons{
       display:flex;
       gap:20px;
       flex-wrap:wrap;
     }
 
     .btn{
-      padding:14px 28px;
-      border-radius:12px;
+      padding:15px 30px;
+      border-radius:15px;
       font-weight:600;
-      transition:0.3s;
+      transition:0.4s;
+      cursor:pointer;
+      display:inline-block;
     }
 
     .btn-primary{
       background:#38bdf8;
-      color:#0f172a;
+      color:#020617;
+      box-shadow:0 0 25px rgba(56,189,248,0.5);
     }
 
     .btn-primary:hover{
+      transform:translateY(-5px);
       background:white;
     }
 
@@ -91,248 +138,523 @@
 
     .btn-secondary:hover{
       background:#38bdf8;
-      color:#0f172a;
-    }
-
-    .card{
-      background:#1e293b;
-      padding:30px;
-      border-radius:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.3);
-    }
-
-    section{
-      padding:90px 10%;
-    }
-
-    .section-title{
-      font-size:40px;
-      margin-bottom:40px;
-      text-align:center;
-      color:#38bdf8;
-    }
-
-    .skills{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .skill-box{
-      background:#1e293b;
-      padding:25px;
-      border-radius:18px;
-      transition:0.3s;
-    }
-
-    .skill-box:hover{
+      color:#020617;
       transform:translateY(-5px);
     }
 
-    .skill-box h3{
-      margin-bottom:15px;
+    .hero-card{
+      background:rgba(15,23,42,0.7);
+      backdrop-filter:blur(15px);
+      border:1px solid rgba(255,255,255,0.1);
+      padding:40px;
+      border-radius:30px;
+      animation:float 4s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-12px);
+      }
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    .hero-card h2{
+      margin-bottom:20px;
       color:#38bdf8;
+      font-size:30px;
     }
 
-    .experience{
+    .hero-card ul{
+      margin-top:20px;
+      padding-left:20px;
+      color:#cbd5e1;
+      line-height:2;
+    }
+
+    .skills-grid{
       display:grid;
-      gap:25px;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
     }
 
-    .exp-box{
-      background:#1e293b;
-      padding:25px;
-      border-radius:18px;
+    .skill-card{
+      background:#0f172a;
+      padding:30px;
+      border-radius:25px;
+      transition:0.4s;
+      border:1px solid rgba(255,255,255,0.05);
     }
 
-    .exp-box h3{
+    .skill-card:hover{
+      transform:translateY(-10px);
+      border-color:#38bdf8;
+      box-shadow:0 0 25px rgba(56,189,248,0.2);
+    }
+
+    .skill-card h3{
+      color:#38bdf8;
+      margin-bottom:15px;
+    }
+
+    .timeline{
+      position:relative;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .timeline::before{
+      content:'';
+      position:absolute;
+      left:50%;
+      top:0;
+      width:4px;
+      height:100%;
+      background:#38bdf8;
+      transform:translateX(-50%);
+    }
+
+    .timeline-item{
+      position:relative;
+      width:50%;
+      padding:20px 40px;
+    }
+
+    .timeline-item:nth-child(odd){
+      left:0;
+    }
+
+    .timeline-item:nth-child(even){
+      left:50%;
+    }
+
+    .timeline-content{
+      background:#0f172a;
+      padding:30px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,0.05);
+      transition:0.4s;
+    }
+
+    .timeline-content:hover{
+      transform:scale(1.03);
+      border-color:#38bdf8;
+    }
+
+    .timeline-content h3{
       color:#38bdf8;
       margin-bottom:10px;
     }
 
+    .timeline-content p{
+      color:#cbd5e1;
+      line-height:1.8;
+    }
+
+    .timeline-item::before{
+      content:'';
+      position:absolute;
+      top:40px;
+      width:20px;
+      height:20px;
+      background:#38bdf8;
+      border-radius:50%;
+      z-index:2;
+    }
+
+    .timeline-item:nth-child(odd)::before{
+      right:-10px;
+    }
+
+    .timeline-item:nth-child(even)::before{
+      left:-10px;
+    }
+
+    .portfolio-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
+      background:#0f172a;
+      border-radius:25px;
+      padding:35px;
+      transition:0.4s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .project-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 30px rgba(56,189,248,0.2);
+    }
+
+    .project-card::before{
+      content:'';
+      position:absolute;
+      width:150px;
+      height:150px;
+      background:#38bdf8;
+      opacity:0.1;
+      border-radius:50%;
+      top:-50px;
+      right:-50px;
+    }
+
+    .project-card h3{
+      margin-bottom:15px;
+      color:#38bdf8;
+    }
+
+    .project-card p{
+      color:#cbd5e1;
+      margin-bottom:20px;
+      line-height:1.8;
+    }
+
     .contact{
       text-align:center;
+      background:#0f172a;
+      border-radius:40px;
+      padding:80px 40px;
     }
 
     .contact p{
       color:#cbd5e1;
-      margin-bottom:30px;
-      font-size:18px;
+      max-width:700px;
+      margin:20px auto 40px;
+      line-height:1.8;
     }
 
     footer{
-      text-align:center;
       padding:30px;
+      text-align:center;
       color:#94a3b8;
-      background:#020617;
+      background:#01040f;
+      margin-top:80px;
     }
 
-    @media(max-width:768px){
+    @media(max-width:900px){
+
       .hero-text h1{
-        font-size:42px;
+        font-size:50px;
       }
 
-      .section-title{
-        font-size:32px;
+      .timeline::before{
+        left:20px;
       }
+
+      .timeline-item{
+        width:100%;
+        padding-left:60px;
+        padding-right:0;
+      }
+
+      .timeline-item:nth-child(even){
+        left:0;
+      }
+
+      .timeline-item::before{
+        left:10px !important;
+      }
+
     }
+
   </style>
 </head>
 
 <body>
 
-  <header>
-    <div class="hero">
+<header>
 
-      <div class="hero-text">
-        <h1>
-          Bonjour, je suis <span>Landry Randrianirina</span>
-        </h1>
+  <section class="container hero">
 
+    <div class="hero-text">
+
+      <h1>
+        Salut 👋<br>
+        Je suis <span>Landry Randrianirina</span>
+      </h1>
+
+      <p>
+        Étudiant en Master 1 Contrôle de Gestion, passionné par
+        l’analyse de données, l’automatisation Excel,
+        le reporting et les solutions intelligentes orientées business.
+      </p>
+
+      <div class="buttons">
+
+        <a href="mailto:landry.moderateur@gmail.com" class="btn btn-primary">
+          📧 Me Contacter
+        </a>
+
+        <a href="https://wa.me/261346787352" target="_blank" class="btn btn-secondary">
+          💬 WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-card">
+
+      <h2>À propos de moi</h2>
+
+      <p style="color:#cbd5e1; line-height:1.8;">
+        Profil sérieux et motivé avec une forte capacité
+        d’adaptation et une excellente maîtrise des outils
+        d’analyse et d’automatisation de données.
+      </p>
+
+      <ul>
+        <li>📊 Contrôle de gestion</li>
+        <li>📈 Reporting & KPI</li>
+        <li>⚡ Automatisation Excel</li>
+        <li>🐍 Python & Data Cleaning</li>
+        <li>📉 Analyse financière</li>
+        <li>🚀 Power BI & N8N</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+</header>
+
+<section>
+
+  <div class="container">
+
+    <h2 class="section-title">Compétences</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3>Excel Avancé</h3>
         <p>
-          Étudiant en Master 1 Contrôle de Gestion passionné par
-          l’analyse de données, Excel, l’automatisation et le pilotage
-          de performance.
+          Formules avancées, TCD, automatisation,
+          reporting et tableaux de bord dynamiques.
         </p>
+      </div>
 
-        <div class="btns">
-          <a href="mailto:landry.moderateur@gmail.com" class="btn btn-primary">
-            Me contacter par Mail
-          </a>
+      <div class="skill-card">
+        <h3>Analyse de Données</h3>
+        <p>
+          Nettoyage, transformation,
+          visualisation et consolidation de données.
+        </p>
+      </div>
 
-          <a href="https://wa.me/261346787352" class="btn btn-secondary" target="_blank">
-            WhatsApp
-          </a>
+      <div class="skill-card">
+        <h3>Contrôle de Gestion</h3>
+        <p>
+          Budgets, analyse des écarts,
+          suivi des performances et KPI.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Outils Techniques</h3>
+        <p>
+          Excel, Python, Power BI,
+          Sage 100, N8N et Web Scraping.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="container">
+
+    <h2 class="section-title">Expériences Professionnelles</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+
+          <h3>Data Service — Daybiz</h3>
+
+          <p>
+            <strong>2025 - 2026</strong><br><br>
+
+            • Nettoyage et normalisation de plus de
+            50 000 lignes de données.<br>
+
+            • Fusion automatisée de dizaines de fichiers Excel
+            dans un reporting unique.<br>
+
+            • Extraction de données prix via web scraping
+            avec intégration automatique dans Excel.
+          </p>
+
         </div>
       </div>
 
-      <div class="card">
-        <h2 style="margin-bottom:20px;color:#38bdf8;">À propos</h2>
+      <div class="timeline-item">
+        <div class="timeline-content">
 
-        <p>
-          Profil sérieux et motivé, actuellement en attente de l’obtention
-          de mon diplôme de Master 1 en Contrôle de Gestion.
-        </p>
+          <h3>Stage Contrôle de Gestion — Sénat de Madagascar</h3>
 
-        <br>
+          <p>
+            <strong>Septembre 2025 - Novembre 2025</strong><br><br>
 
-        <p>
-          J’ai développé des compétences solides en :
-        </p>
+            • Préparation de tableaux de bord budgétaires.<br>
 
-        <br>
+            • Suivi des dépenses et analyse des écarts.<br>
 
-        <ul style="padding-left:20px;color:#cbd5e1;">
-          <li>Analyse de données</li>
-          <li>Excel avancé & automatisation</li>
-          <li>Reporting & tableaux de bord</li>
-          <li>Contrôle de gestion</li>
-          <li>Nettoyage et transformation de données</li>
-          <li>Python & Power BI</li>
-        </ul>
+            • Rédaction du mémoire :
+            “Évaluation d’une conception budgétaire”.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+
+          <h3>Stage Contrôle Interne — Cabinet TELO A</h3>
+
+          <p>
+            <strong>Juillet 2025 - Septembre 2025</strong><br><br>
+
+            • Formalisation et amélioration des procédures
+            financières.<br>
+
+            • Analyses financières de rentabilité.<br>
+
+            • Rédaction de rapports d’aide à la décision.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+
+          <h3>Data Operator — Stockpro</h3>
+
+          <p>
+            <strong>Mars 2023 - Février 2025</strong><br><br>
+
+            • Création de tableaux de suivi
+            ventes/stocks/chiffre d’affaires.<br>
+
+            • Automatisation de fichiers Excel.<br>
+
+            • Collaboration avec les managers
+            pour améliorer les indicateurs de performance.
+          </p>
+
+        </div>
       </div>
 
     </div>
-  </header>
 
-  <section>
-    <h2 class="section-title">Compétences</h2>
+  </div>
 
-    <div class="skills">
+</section>
 
-      <div class="skill-box">
-        <h3>Excel Avancé</h3>
+<section>
+
+  <div class="container">
+
+    <h2 class="section-title">Mes Portfolios GitHub</h2>
+
+    <div class="portfolio-grid">
+
+      <div class="project-card">
+
+        <h3>📁 Portfolio GitHub Principal</h3>
+
         <p>
-          Formules avancées, TCD, automatisation, reporting et suivi de performance.
+          Retrouvez mes projets, automatisations,
+          dashboards et travaux liés à l’analyse de données,
+          Excel et Python.
         </p>
+
+        <a href="https://github.com/Landry-Le-Mat/Portfolio"
+           target="_blank"
+           class="btn btn-primary">
+           Voir le Repository
+        </a>
+
       </div>
 
-      <div class="skill-box">
-        <h3>Analyse de Données</h3>
-        <p>
-          Nettoyage, transformation, consolidation et visualisation de données.
-        </p>
-      </div>
+      <div class="project-card">
 
-      <div class="skill-box">
-        <h3>Contrôle de Gestion</h3>
-        <p>
-          Budgets, analyse des écarts, tableaux de bord et suivi financier.
-        </p>
-      </div>
-
-      <div class="skill-box">
-        <h3>Outils</h3>
-        <p>
-          Excel, Python, Power BI, N8N, Sage 100.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Expériences</h2>
-
-    <div class="experience">
-
-      <div class="exp-box">
-        <h3>Data Operator - Support Reporting</h3>
-        <p><strong>Stockpro | 2023 - 2025</strong></p>
+        <h3>🚀 Mes 2 Dossiers Portfolio</h3>
 
         <p>
-          Production de tableaux de suivi, automatisation Excel,
-          reporting ventes/stocks et analyse des écarts.
+          Ce repository contient actuellement deux dossiers
+          présentant mes différents projets et réalisations.
         </p>
-      </div>
 
-      <div class="exp-box">
-        <h3>Stage Contrôle de Gestion</h3>
-        <p><strong>Sénat de Madagascar | 2025</strong></p>
+        <a href="https://github.com/Landry-Le-Mat/Portfolio"
+           target="_blank"
+           class="btn btn-secondary">
+           Explorer les projets
+        </a>
 
-        <p>
-          Préparation de tableaux de bord budgétaires,
-          suivi des dépenses et rédaction de mémoire.
-        </p>
-      </div>
-
-      <div class="exp-box">
-        <h3>Data Service</h3>
-        <p><strong>Daybiz | 2025 - 2026</strong></p>
-
-        <p>
-          Nettoyage de plus de 50 000 lignes de données,
-          automatisation et web scraping.
-        </p>
       </div>
 
     </div>
-  </section>
 
-  <section class="contact">
-    <h2 class="section-title">Contact</h2>
+  </div>
 
-    <p>
-      Vous souhaitez collaborer avec moi ou discuter d’un projet ?
-      Contactez-moi directement via WhatsApp ou Email.
-    </p>
+</section>
 
-    <div class="btns" style="justify-content:center;">
+<section>
 
-      <a href="mailto:landry.moderateur@gmail.com" class="btn btn-primary">
-        Envoyer un Email
-      </a>
+  <div class="container">
 
-      <a href="https://wa.me/261346787352" class="btn btn-secondary" target="_blank">
-        Contacter sur WhatsApp
-      </a>
+    <div class="contact">
+
+      <h2 class="section-title">Contact</h2>
+
+      <p>
+        Vous souhaitez collaborer avec moi,
+        discuter d’un projet ou recruter un profil
+        orienté data, reporting et contrôle de gestion ?
+      </p>
+
+      <div class="buttons" style="justify-content:center;">
+
+        <a href="mailto:landry.moderateur@gmail.com"
+           class="btn btn-primary">
+           📧 Envoyer un Email
+        </a>
+
+        <a href="https://wa.me/261346787352"
+           target="_blank"
+           class="btn btn-secondary">
+           💬 Contacter sur WhatsApp
+        </a>
+
+      </div>
 
     </div>
-  </section>
 
-  <footer>
-    © 2026 - Portfolio Landry Randrianirina
-  </footer>
+  </div>
+
+</section>
+
+<footer>
+
+  © 2026 — Portfolio de Landry Randrianirina
+
+</footer>
 
 </body>
 </html>
+```
