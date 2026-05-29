@@ -3,6 +3,7 @@
 <html lang="fr">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -256,30 +257,6 @@
     .experience-description{
       color:#64748b;
       line-height:1.9;
-      margin-bottom:30px;
-    }
-
-    .experience-details{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
-    }
-
-    .detail-box{
-      background:#f8fbff;
-      border:1px solid #dbeafe;
-      padding:25px;
-      border-radius:18px;
-    }
-
-    .detail-box h4{
-      color:#2563eb;
-      margin-bottom:10px;
-    }
-
-    .detail-box p{
-      color:#64748b;
-      line-height:1.7;
     }
 
     /* PORTFOLIOS */
@@ -350,36 +327,33 @@
       background:linear-gradient(135deg,#2563eb,#1d4ed8);
     }
 
-    /* CAROUSEL */
+    /* GALLERY */
 
-    .carousel{
-      position:relative;
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .gallery-card{
       overflow:hidden;
       border-radius:25px;
+      background:white;
+      border:1px solid #dbeafe;
+      box-shadow:0 10px 25px rgba(0,0,0,0.05);
+      transition:0.3s;
     }
 
-    .carousel-track{
-      display:flex;
-      animation:scroll 25s linear infinite;
-      gap:20px;
+    .gallery-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(37,99,235,0.1);
     }
 
-    .carousel img{
-      width:400px;
-      height:250px;
+    .gallery-card img{
+      width:100%;
+      height:260px;
       object-fit:cover;
-      border-radius:20px;
-      border:4px solid white;
-      box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    @keyframes scroll{
-      0%{
-        transform:translateX(0);
-      }
-      100%{
-        transform:translateX(-50%);
-      }
+      display:block;
     }
 
     /* CONTACT */
@@ -422,11 +396,6 @@
 
       .experience-card h3{
         font-size:24px;
-      }
-
-      .carousel img{
-        width:300px;
-        height:200px;
       }
 
     }
@@ -473,9 +442,9 @@
       <h2>À propos</h2>
 
       <p>
-        Profil sérieux, analytique et orienté résultats.
-        Passionné par l’exploitation intelligente des données,
-        l’automatisation et l’amélioration des performances financières.
+        Profil analytique et orienté résultats spécialisé
+        en data analyse, reporting financier,
+        automatisation Excel et tableaux de bord.
       </p>
 
       <ul>
@@ -483,7 +452,6 @@
         <li>📈 Reporting & KPI</li>
         <li>⚡ Automatisation Excel</li>
         <li>🐍 Python & Data Cleaning</li>
-        <li>📉 Analyse financière</li>
         <li>🚀 Power BI & N8N</li>
       </ul>
 
@@ -506,24 +474,23 @@
       <div class="skill-card">
         <h3>Excel Avancé</h3>
         <p>
-          Formules avancées, tableaux croisés dynamiques,
-          automatisation et dashboards professionnels.
+          Dashboards professionnels,
+          automatisation et reporting.
         </p>
       </div>
 
       <div class="skill-card">
         <h3>Analyse de Données</h3>
         <p>
-          Nettoyage, transformation, consolidation
-          et visualisation de données stratégiques.
+          Nettoyage, transformation
+          et visualisation des données.
         </p>
       </div>
 
       <div class="skill-card">
         <h3>Contrôle de Gestion</h3>
         <p>
-          Budgets, analyse des écarts,
-          suivi de performance et KPI.
+          Budgets, KPI et analyse des écarts.
         </p>
       </div>
 
@@ -531,7 +498,7 @@
         <h3>Outils</h3>
         <p>
           Excel, Python, Power BI,
-          Sage 100, N8N et Web Scraping.
+          N8N et Web Scraping.
         </p>
       </div>
 
@@ -561,8 +528,9 @@
         <h3>Data Service — Daybiz</h3>
 
         <p class="experience-description">
-          Gestion de projets orientés data, automatisation
-          et reporting intelligent.
+          Gestion de projets data,
+          automatisation Excel,
+          reporting intelligent et traitement de données.
         </p>
 
       </div>
@@ -570,15 +538,15 @@
       <div class="experience-card">
 
         <div class="experience-top">
-          <span class="experience-date">Sept. 2025 - Nov. 2025</span>
+          <span class="experience-date">2025</span>
           <span class="experience-badge">FINANCE • ANALYSE</span>
         </div>
 
         <h3>Stage Contrôle de Gestion — Sénat de Madagascar</h3>
 
         <p class="experience-description">
-          Mise en pratique des outils de contrôle de gestion
-          et reporting budgétaire institutionnel.
+          Reporting budgétaire,
+          tableaux de bord et analyse financière.
         </p>
 
       </div>
@@ -586,15 +554,15 @@
       <div class="experience-card">
 
         <div class="experience-top">
-          <span class="experience-date">Juil. 2025 - Sept. 2025</span>
+          <span class="experience-date">2025</span>
           <span class="experience-badge">AUDIT • CONTRÔLE</span>
         </div>
 
         <h3>Stage Contrôle Interne — Cabinet TELO A</h3>
 
         <p class="experience-description">
-          Participation à l’amélioration des processus financiers
-          et analyses de rentabilité.
+          Analyse financière et amélioration
+          des procédures internes.
         </p>
 
       </div>
@@ -602,15 +570,15 @@
       <div class="experience-card">
 
         <div class="experience-top">
-          <span class="experience-date">Mars 2023 - Février 2025</span>
+          <span class="experience-date">2023 - 2025</span>
           <span class="experience-badge">REPORTING • EXCEL</span>
         </div>
 
         <h3>Data Operator — Stockpro</h3>
 
         <p class="experience-description">
-          Production de tableaux de suivi
-          et automatisation des reportings opérationnels.
+          Reporting Excel,
+          automatisation et analyse des données.
         </p>
 
       </div>
@@ -621,7 +589,7 @@
 
 </section>
 
-<!-- PORTFOLIOS -->
+<!-- PORTFOLIO -->
 
 <section>
 
@@ -636,8 +604,9 @@
         <h3>📁 Portfolio Principal</h3>
 
         <p>
-          Retrouvez tous mes projets, dashboards,
-          automatisations Excel et analyses de données.
+          Retrouvez mes projets,
+          dashboards, automatisations
+          et analyses de données.
         </p>
 
         <a href="https://github.com/Landry-Le-Mat/Portfolio"
@@ -653,7 +622,8 @@
         <h3>🚀 Mes Créations</h3>
 
         <p>
-          Découvrez les projets disponibles dans mon repository GitHub.
+          Découvrez les différents projets
+          disponibles sur mon GitHub.
         </p>
 
         <a href="https://github.com/Landry-Le-Mat/Portfolio"
@@ -670,32 +640,52 @@
 
 </section>
 
-<!-- CAROUSEL IMAGES -->
+<!-- GALLERY -->
 
 <section>
 
   <div class="container">
 
-    <h2 class="section-title">Captures de Mes Créations</h2>
+    <h2 class="section-title">
+      Captures de Mes Créations
+    </h2>
 
-    <div class="carousel">
+    <div class="gallery">
 
-      <div class="carousel-track">
+      <div class="gallery-card">
+        <img src="images/Capture d’écran 2025-10-11 à 06.35.47.png" alt="Projet Dashboard">
+      </div>
 
-        <!-- REMPLACE LES NOMS PAR TES IMAGES -->
+      <div class="gallery-card">
+        <img src="images/Capture d’écran 2025-10-11 à 06.38.24.png" alt="Projet Excel">
+      </div>
 
-        <img src="images/projet1.png" alt="Projet 1">
-        <img src="images/projet2.png" alt="Projet 2">
-        <img src="images/projet3.png" alt="Projet 3">
-        <img src="images/projet4.png" alt="Projet 4">
+      <div class="gallery-card">
+        <img src="images/Capture d’écran 2025-10-11 à 06.39.07.png" alt="Projet Data">
+      </div>
 
-        <!-- DUPLICATION POUR EFFET INFINI -->
+      <div class="gallery-card">
+        <img src="images/EAN code to gmail.jpeg" alt="EAN Gmail">
+      </div>
 
-        <img src="images/projet1.png" alt="Projet 1">
-        <img src="images/projet2.png" alt="Projet 2">
-        <img src="images/projet3.png" alt="Projet 3">
-        <img src="images/projet4.png" alt="Projet 4">
+      <div class="gallery-card">
+        <img src="images/EAN search price on google.png" alt="EAN Search">
+      </div>
 
+      <div class="gallery-card">
+        <img src="images/Income and Expense on googlesheet.png" alt="Google Sheet">
+      </div>
+
+      <div class="gallery-card">
+        <img src="images/invoice pdf to telegram.jpeg" alt="Invoice Telegram">
+      </div>
+
+      <div class="gallery-card">
+        <img src="images/Telegram and Notion.png" alt="Telegram Notion">
+      </div>
+
+      <div class="gallery-card">
+        <img src="images/telegram to database to telegram.jpeg" alt="Telegram Database">
       </div>
 
     </div>
@@ -717,9 +707,8 @@
       </h2>
 
       <p>
-        Vous souhaitez collaborer avec moi,
-        discuter d’un projet ou recruter un profil
-        orienté data et contrôle de gestion ?
+        Vous souhaitez collaborer avec moi
+        ou discuter d’un projet ?
       </p>
 
       <div class="buttons" style="justify-content:center;">
